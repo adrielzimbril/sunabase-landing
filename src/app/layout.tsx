@@ -32,11 +32,15 @@ export const metadata: Metadata = {
     "AI Mockup Challenge",
   ],
   authors: [{ name: "Adriel Zimbril", url: "https://www.adrielzimbril.com" }],
+  icons: {
+    icon: "/opengraph-image.png",
+    apple: "/opengraph-image.png",
+  },
   openGraph: {
     title: "Sunabase | The Modern Backend Standard",
     description:
       "Enterprise-grade database infrastructure. Day 1 of the AI-Generated Mockup Challenge.",
-    url: "sunabase-landing.adrielzimbril.com",
+    url: "https://sunabase-landing.adrielzimbril.com",
     siteName: "Sunabase",
     images: [
       {
