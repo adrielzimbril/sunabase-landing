@@ -33,8 +33,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Adriel Zimbril", url: "https://www.adrielzimbril.com" }],
   icons: {
-    icon: "/opengraph-image.png",
-    apple: "/opengraph-image.png",
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
   },
   openGraph: {
     title: "Sunabase | The Modern Backend Standard",
