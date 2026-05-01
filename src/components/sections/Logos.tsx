@@ -35,20 +35,20 @@ export const Logos = () => {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="flex w-max items-center justify-center gap-16 py-4"
+          className="flex w-max items-center justify-center gap-8 md:gap-16 py-4"
         >
           {/* First set of logos */}
           {logos.map((logo, i) => (
             <div key={i} className="flex items-center gap-2 text-white">
               {logo.icon}
-              <span className="font-sans text-lg font-medium">{logo.name}</span>
+              <span className="font-sans text-base md:text-lg font-medium">{logo.name}</span>
             </div>
           ))}
           {/* Second set of logos for seamless loop */}
           {logos.map((logo, i) => (
             <div key={`dup-${i}`} className="flex items-center gap-2 text-white">
               {logo.icon}
-              <span className="font-sans text-lg font-medium">{logo.name}</span>
+              <span className="font-sans text-base md:text-lg font-medium">{logo.name}</span>
             </div>
           ))}
         </motion.div>

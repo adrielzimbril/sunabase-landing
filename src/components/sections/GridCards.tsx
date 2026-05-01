@@ -273,7 +273,7 @@ const AutomationCard = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(62,207,142,0.08),transparent_70%)]" />
         
         {/* Workflow Visualization */}
-        <div className="relative w-full h-full flex items-center justify-center scale-90">
+        <div className="relative w-full h-full flex items-center justify-center scale-[0.6] sm:scale-75 md:scale-90">
           <svg className="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 400 240">
             <defs>
               <linearGradient id="flowGradient" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -332,7 +332,7 @@ const AutomationCard = () => {
             />
           </svg>
 
-          <div className="flex gap-16 relative z-10 items-center w-full max-w-lg justify-center">
+          <div className="flex gap-8 md:gap-16 relative z-10 items-center w-full max-w-lg justify-center">
             {/* Input Node (Database Webhook) */}
             <div className="relative group/db">
               <div className="w-14 h-14 rounded-2xl bg-[#0f1714] border border-[#3ECF8E]/20 flex items-center justify-center shadow-lg transition-transform group-hover/db:scale-105 duration-300">

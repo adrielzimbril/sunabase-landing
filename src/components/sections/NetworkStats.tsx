@@ -42,7 +42,7 @@ const stats = [
 export const NetworkStats = () => {
   return (
     <section className="relative z-20 mx-auto mb-32 w-full max-w-7xl px-6">
-      <div className="grid grid-cols-2 gap-4 md:grid-cols-4 md:gap-6">
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 md:gap-6">
         {stats.map((stat, i) => (
           <motion.div
             key={stat.label}

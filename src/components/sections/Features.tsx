@@ -123,42 +123,47 @@ const CodeEditor = () => {
 
 export const Features = () => {
   return (
-    <section className="relative z-20 mx-auto mt-24 mb-24 w-full max-w-7xl px-2 pt-10 pb-32">
+    <section className="relative z-20 mx-auto mt-12 mb-12 w-full max-w-7xl px-4 pt-10 pb-20 md:mt-24 md:mb-24 md:px-2 md:pb-32">
       <div
-        className="group relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-lg"
+        className="group relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-white/10 to-white/0 backdrop-blur-lg md:rounded-[2.5rem]"
         style={{ border: "1px solid rgba(255, 255, 255, 0.1)" }}
       >
         {/* Background Glow Effect */}
         <div className="pointer-events-none absolute bottom-0 left-0 h-1/2 w-full bg-gradient-to-tr from-emerald-500/10 via-transparent to-transparent opacity-40" />
 
-        <div className="grid lg:grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2">
           {/* Text Content */}
-          <div className="relative z-10 flex flex-col justify-center p-8 md:p-16">
-            <div className="mb-2 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5">
-              <Box className="h-6 w-6 text-white opacity-50" />
+          <div className="relative z-10 flex flex-col justify-center p-6 md:p-16 lg:p-20">
+            <div className="mb-2 flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 md:h-12 md:w-12 md:rounded-2xl">
+              <Box className="h-5 w-5 text-white opacity-50 md:h-6 md:w-6" />
             </div>
 
-            <h2 className="mt-6 mb-6 font-manrope text-3xl font-semibold tracking-tight text-white leading-[1.1] md:text-4xl">
+            <h2 className="mt-4 mb-4 font-manrope text-2xl font-semibold tracking-tight text-white leading-[1.2] sm:text-3xl md:mt-6 md:mb-6 md:text-4xl">
               Open Source Database Infrastructure
             </h2>
 
-            <div className="space-y-6 font-sans text-lg leading-relaxed text-gray-400">
+            <div className="space-y-4 font-sans text-base leading-relaxed text-gray-400 md:space-y-6 md:text-lg">
               <p>
                 Power your applications with Sunabase's open source database clusters. Scalable, secure, and ready for global traffic.
               </p>
               <p>
                 Our SDKs provide type-safe access to your data with a simple, SQL-like interface. Eliminate infrastructure overhead and focus on shipping features with 99.99% uptime guaranteed.
               </p>
-              <p>
+              <p className="hidden sm:block">
                 Instant Edge functions — run logic close to your users, handle authentication, and store assets with sub-millisecond latency.
               </p>
             </div>
           </div>
 
           {/* Visual Content */}
-          <CodeEditor />
+          <div className="h-[450px] md:h-[500px] lg:h-auto overflow-hidden">
+            <div className="relative h-full scale-90 sm:scale-100 origin-center transition-transform duration-500">
+              <CodeEditor />
+            </div>
+          </div>
         </div>
       </div>
     </section>
   );
 };
+

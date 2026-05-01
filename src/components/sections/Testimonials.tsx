@@ -76,7 +76,7 @@ export const Testimonials = () => {
             <motion.h2 
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              className="text-4xl md:text-6xl font-medium tracking-tight leading-[1.05]"
+              className="text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight leading-[1.05]"
             >
               Loved by <br />
               <span className="text-zinc-500">thousands of</span> <br />
@@ -106,7 +106,7 @@ export const Testimonials = () => {
           </div>
 
           {/* 3D Stack Column */}
-          <div className="lg:w-1/2 relative h-[450px] flex items-center justify-center w-full">
+          <div className="lg:w-1/2 relative h-[350px] sm:h-[400px] md:h-[450px] flex items-center justify-center w-full">
             <div className="relative w-full max-w-[420px] h-full flex items-center justify-center">
               <AnimatePresence mode="popLayout">
                 {cards.map((testimonial, index) => {
@@ -156,7 +156,7 @@ export const Testimonials = () => {
 
                       <div className="relative">
                         <Quote className="absolute -top-4 -left-2 w-8 h-8 text-emerald-500/10" />
-                        <p className="text-xl md:text-2xl font-medium text-white leading-relaxed tracking-tight relative z-10 font-manrope">
+                        <p className="text-lg md:text-2xl font-medium text-white leading-relaxed tracking-tight relative z-10 font-manrope">
                           {testimonial.content}
                         </p>
                       </div>

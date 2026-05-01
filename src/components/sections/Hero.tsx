@@ -55,14 +55,14 @@ const InteractiveWord = ({ word }: { word: string }) => {
 
 export const Hero = () => {
   return (
-    <section className="relative flex min-h-screen w-full flex-col items-center justify-center overflow-hidden pt-32 md:pt-20">
-      {/* Background Effects - Made transparent to let global background shine through */}
+    <section className="relative flex min-h-[90vh] w-full flex-col items-center justify-center overflow-hidden pt-32 md:min-h-screen md:pt-20">
+      {/* Background Effects */}
       <div className="absolute inset-0 -z-20 overflow-hidden pointer-events-none">
         <div className="absolute left-1/2 top-[-10%] h-[80%] w-[120%] -translate-x-1/2 bg-[radial-gradient(ellipse_at_top,rgba(16,185,129,0.05)_0%,transparent_70%)]" />
       </div>
 
-      {/* Grid Curtain Structure */}
-      <div className="absolute inset-0 -z-10 grid h-full w-full grid-cols-1 pointer-events-none md:grid-cols-7">
+      {/* Grid Curtain Structure - Simplified for mobile */}
+      <div className="absolute inset-0 -z-10 grid h-full w-full grid-cols-3 pointer-events-none md:grid-cols-7">
         {[...Array(7)].map((_, i) => (
           <motion.div
             key={i}
@@ -75,11 +75,11 @@ export const Hero = () => {
             }}
             className={cn(
               "relative h-full border-white/5",
-              i < 3
+              i < 2 || i > 4
                 ? "hidden border-r md:block"
                 : i === 3
-                  ? "border-r md:border-none"
-                  : "hidden border-l md:block",
+                  ? "border-none"
+                  : "border-r",
             )}
           >
             <div
@@ -94,33 +94,33 @@ export const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-5xl px-6 text-center mt-24 mb-24">
+      <div className="relative z-10 mx-auto max-w-5xl px-4 text-center mt-12 mb-12 md:px-6 md:mt-24 md:mb-24">
         {/* Badge */}
         <motion.div
-          initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="relative mb-10 inline-flex cursor-pointer items-center gap-x-2 rounded-full bg-linear-to-br from-white/10 to-white/0 px-3 py-1.5 backdrop-blur-sm transition-transform hover:scale-105 group"
+          transition={{ duration: 0.8, delay: 0.8 }}
+          className="relative mb-8 inline-flex cursor-pointer items-center gap-x-2 rounded-full bg-linear-to-br from-white/10 to-white/0 px-3 py-1.5 backdrop-blur-sm transition-transform hover:scale-105 group"
           style={{ boxShadow: "0 0 0 1px rgba(255, 255, 255, 0.1)" }}
         >
           <span className="h-1.5 w-1.5 rounded-full bg-emerald-500 shadow-[0_0_10px_rgba(16,185,129,0.5)] group-hover:animate-pulse" />
-          <span className="font-sans text-xs font-medium tracking-wide text-emerald-100/80 transition-colors group-hover:text-white">
+          <span className="font-sans text-[10px] md:text-xs font-medium tracking-wide text-emerald-100/80 transition-colors group-hover:text-white">
             New release: Sunabase Cloud v1.0
           </span>
         </motion.div>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1, delay: 1 }}
-          className="mb-8 flex flex-wrap justify-center gap-x-[0.25em] gap-y-2 font-manrope text-6xl font-medium tracking-tighter leading-[1.1] md:text-8xl"
+          transition={{ duration: 0.8, delay: 1 }}
+          className="mb-6 flex flex-wrap justify-center gap-x-[0.2em] gap-y-1 font-manrope text-4xl font-medium tracking-tighter leading-[1.1] sm:text-6xl md:text-7xl lg:text-8xl md:mb-8 md:gap-x-[0.25em] md:gap-y-2"
         >
           <span className="bg-linear-to-b from-white via-white to-white/50 bg-clip-text text-transparent opacity-60">
             The
           </span>
           <InteractiveWord word="Atomic" />
           <InteractiveWord word="Infrastructure" />
-          <span className="bg-linear-to-b from-white via-white to-white/50 bg-clip-text text-transparent opacity-60 self-center mx-2">
+          <span className="bg-linear-to-b from-white via-white to-white/50 bg-clip-text text-transparent opacity-60 self-center mx-1 md:mx-2">
             for
           </span>
           <InteractiveWord word="Modern" />
@@ -129,10 +129,10 @@ export const Hero = () => {
 
         {/* Subtext */}
         <motion.p
-          initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1, delay: 1.2 }}
-          className="mx-auto mb-12 max-w-3xl font-manrope text-xl font-medium leading-relaxed tracking-normal text-gray-400 md:text-2xl"
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="mx-auto mb-10 max-w-2xl font-manrope text-lg font-medium leading-relaxed tracking-normal text-gray-400 md:text-2xl md:mb-12 md:max-w-3xl"
         >
           Deploy managed Postgres, Zero-Trust Identity, and Edge-Native
           Workflows in seconds. Sunabase is the high-fidelity backend built for
@@ -141,22 +141,22 @@ export const Hero = () => {
 
         {/* CTA */}
         <motion.div
-          initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1, delay: 1.4 }}
-          className="flex flex-col items-center justify-center gap-6 md:flex-row mb-12"
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-6 md:mb-12"
         >
           <ShinyButton>Start Building</ShinyButton>
         </motion.div>
 
         {/* Logos Subtext */}
         <motion.div
-          initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+          initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
           animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-          transition={{ duration: 1, delay: 1.6 }}
-          className="mt-32 flex flex-col items-center gap-y-4 mb-20"
+          transition={{ duration: 0.8, delay: 1.6 }}
+          className="mt-20 flex flex-col items-center gap-y-4 mb-10 md:mt-32 md:mb-20"
         >
-          <p className="font-sans text-xs font-medium tracking-widest text-gray-500 uppercase">
+          <p className="font-sans text-[10px] md:text-xs font-medium tracking-widest text-gray-500 uppercase px-4 text-center">
             Trusted by modern developers and data-driven teams
           </p>
           <Link
@@ -171,3 +171,4 @@ export const Hero = () => {
     </section>
   );
 };
+

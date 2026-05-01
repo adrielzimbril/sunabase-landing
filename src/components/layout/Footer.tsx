@@ -24,7 +24,7 @@ export const Footer = () => {
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-[100px] bg-emerald-500/10 blur-[100px] pointer-events-none" />
 
       <div className="mx-auto max-w-7xl relative">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-12 sm:gap-8 lg:gap-12">
           
           {/* Brand Info - Spans 4 cols */}
           <div className="lg:col-span-4 flex flex-col justify-between">
@@ -102,8 +102,8 @@ export const Footer = () => {
           </div>
 
           {/* Contact / Action - Spans 4 cols */}
-          <div className="lg:col-span-4 flex flex-col justify-between">
-            <div className="p-8 rounded-3xl bg-linear-to-br from-zinc-900/80 to-black border border-white/5 shadow-2xl relative overflow-hidden group">
+          <div className="lg:col-span-4 flex flex-col justify-between sm:col-span-2 lg:col-span-4">
+            <div className="p-6 sm:p-8 rounded-3xl bg-linear-to-br from-zinc-900/80 to-black border border-white/5 shadow-2xl relative overflow-hidden group">
               {/* Subtle background grid */}
               <div className="absolute inset-0 z-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-size-[16px_16px]" />
               

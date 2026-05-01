@@ -402,7 +402,7 @@ export const MobileSuite = () => {
           </div>
 
           {/* Visual Column */}
-          <div className="lg:col-span-4 flex justify-center order-1 lg:order-2 relative z-20">
+          <div className="lg:col-span-4 flex justify-center order-1 lg:order-2 relative z-20 scale-75 sm:scale-90 md:scale-100 origin-center">
             <IPhone17ProMax>
                <PhoneDashboard />
             </IPhone17ProMax>

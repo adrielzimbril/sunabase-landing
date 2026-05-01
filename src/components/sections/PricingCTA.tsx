@@ -19,7 +19,7 @@ export const PricingCTA = () => {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <h2 className="font-manrope text-4xl font-bold tracking-tight text-white md:text-6xl mb-8">
+          <h2 className="font-manrope text-3xl sm:text-4xl font-bold tracking-tight text-white md:text-6xl mb-8">
             Build your next big thing with <span className="bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">Sunabase.</span>
           </h2>
           

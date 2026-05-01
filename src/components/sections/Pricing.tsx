@@ -78,7 +78,7 @@ export const Pricing = () => {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-5xl md:text-7xl font-medium tracking-tight leading-[0.95]"
+            className="text-4xl sm:text-5xl md:text-7xl font-medium tracking-tight leading-[0.95]"
           >
             PRICING THAT <br />
             <span className="text-white/80">SCALES WITH</span> <br />
