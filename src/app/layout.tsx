@@ -19,12 +19,23 @@ const manrope = Manrope({
 
 export const metadata: Metadata = {
   title: "Sunabase | The Modern Backend Standard",
-  description: "Enterprise-grade database infrastructure featuring Atomic SQL, Zero-Trust Identity, and Edge-Native Workflows. Day 1/30 of the AI Mockup Challenge.",
-  keywords: ["Sunabase", "PostgreSQL", "Atomic SQL", "Zero-Trust Auth", "Edge Workflows", "Database Infrastructure", "Backend as a Service", "AI Mockup Challenge"],
-  authors: [{ name: "Adriel Zimbril", url: "https://adrielzimbril.com" }],
+  description:
+    "Enterprise-grade database infrastructure featuring Atomic SQL, Zero-Trust Identity, and Edge-Native Workflows. Day 1/30 of the AI Mockup Challenge.",
+  keywords: [
+    "Sunabase",
+    "PostgreSQL",
+    "Atomic SQL",
+    "Zero-Trust Auth",
+    "Edge Workflows",
+    "Database Infrastructure",
+    "Backend as a Service",
+    "AI Mockup Challenge",
+  ],
+  authors: [{ name: "Adriel Zimbril", url: "https://www.adrielzimbril.com" }],
   openGraph: {
     title: "Sunabase | The Modern Backend Standard",
-    description: "Enterprise-grade database infrastructure. Day 1 of the AI-Generated Mockup Challenge.",
+    description:
+      "Enterprise-grade database infrastructure. Day 1 of the AI-Generated Mockup Challenge.",
     url: "sunabase-landing.adrielzimbril.com",
     siteName: "Sunabase",
     images: [
@@ -41,7 +52,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Sunabase | The Modern Backend Standard",
-    description: "Enterprise-grade database infrastructure. Day 1 of the AI-Generated Mockup Challenge.",
+    description:
+      "Enterprise-grade database infrastructure. Day 1 of the AI-Generated Mockup Challenge.",
     images: ["/opengraph-image.png"],
     creator: "@adrielzimbril",
   },
