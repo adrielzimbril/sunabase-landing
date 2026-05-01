@@ -120,7 +120,7 @@ export const Hero = () => {
           </span>
           <InteractiveWord word="Atomic" />
           <InteractiveWord word="Infrastructure" />
-          <span className="bg-linear-to-b from-white via-white to-white/50 bg-clip-text text-transparent opacity-60 text-4xl md:text-5xl self-center mx-2">
+          <span className="bg-linear-to-b from-white via-white to-white/50 bg-clip-text text-transparent opacity-60 self-center mx-2">
             for
           </span>
           <InteractiveWord word="Modern" />
